@@ -1,22 +1,30 @@
 package lists;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public class LinkedListExample {
     public static void main(String[] args) {
-        int n = 5;
 
-        List<Integer> ll = new LinkedList<Integer>();
+        // Create a new LinkedList
+        LinkedList<String> ll = new LinkedList<String>();
 
-        for (int i = 1; i <= n; i++) {
-            ll.add(i);
+        // Add elements
+        ll.add("apple");
+        ll.add("orange");
+        ll.add("pineapple");
+
+        ll.add(1, "cherry");
+
+        System.out.println("Initial LinkedLits" + ll);
+
+        ll.set(1, "banana");
+        ll.remove("pineapple");
+
+        System.out.println("Updated LinkedList" + ll);
+
+        for (int i = 0; i < ll.size(); i++) {
+            System.out.println(ll.get(i));
         }
 
-        System.out.println("Linked List: " + ll);
-
-        ll.remove(1);
-
-        System.out.println("Updated Linked List: " + ll);
     }
 }
