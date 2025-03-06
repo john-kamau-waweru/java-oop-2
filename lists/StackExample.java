@@ -1,23 +1,20 @@
 package lists;
 
-import java.util.List;
 import java.util.Stack;
 
 public class StackExample {
     public static void main(String[] args) {
-        int n = 5;
+        Stack<String> s = new Stack<String>();
 
-        List<Integer> s = new Stack<Integer>();
+        s.push("apple");
+        s.push("banana");
+        s.push("avocado");
 
-        for (int i = 1; i <= n; i++) {
-            s.add(i);
+        while (!s.isEmpty()) {
+            System.out.println(s.pop());
         }
 
-        System.out.println("Stack " + s);
-
-        s.remove(2);
-
-        System.out.println("Updated Stack: " + s);
+        System.out.println(s);
 
     }
 }
